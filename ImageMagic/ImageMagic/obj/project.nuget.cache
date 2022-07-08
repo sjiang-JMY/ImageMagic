@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wKFBJQH0MI5AWrQFZmntyshxsqJo+SIHwOJsnBP0bTGFmAi1GPcMXeV/5EisHkKOuWiaE0djNqD45RVbOHMqkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sjiang\\Desktop\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sjiang\\.nuget\\packages\\magick.net-q16-anycpu\\11.2.1\\magick.net-q16-anycpu.11.2.1.nupkg.sha512",
+    "C:\\Users\\sjiang\\.nuget\\packages\\magick.net.core\\11.2.0\\magick.net.core.11.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
