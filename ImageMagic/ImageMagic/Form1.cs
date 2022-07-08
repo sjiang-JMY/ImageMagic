@@ -24,7 +24,7 @@ namespace ImageMagic
         private void SelectFoler(object sender, EventArgs e)
         {
             FolderBrowserDialog fileFolder = new FolderBrowserDialog();
-            if(fileFolder.ShowDialog() == DialogResult.OK)
+            if (fileFolder.ShowDialog() == DialogResult.OK)
             {
                 this.fromInput.Text = fileFolder.SelectedPath;
             }
@@ -38,13 +38,14 @@ namespace ImageMagic
                 this.outInput.Text = fileFolder.SelectedPath;
             }
         }
-         private void GetFormatCombaData()
+        private void GetFormatCombaData()
         {
             List<Info> infos = new List<Info>();
-            infos.Add(new Info() { Id = 1, Name = "JPG" });
-            infos.Add(new Info() { Id = 2, Name = "PNG" });
-            infos.Add(new Info() { Id = 3, Name = "SVG" });
-            infos.Add(new Info() { Id = 4, Name = "GIF" });
+            infos.Add(new Info() { Id = 1, Name = "jpg" });
+            infos.Add(new Info() { Id = 2, Name = "png" });
+            infos.Add(new Info() { Id = 3, Name = "svg" });
+            infos.Add(new Info() { Id = 4, Name = "gif" });
+            infos.Add(new Info() { Id = 5, Name = "ico" });
             this.formatComba.DataSource = infos;
             this.formatComba.ValueMember = "Id";
             this.formatComba.DisplayMember = "Name";
@@ -78,14 +79,14 @@ namespace ImageMagic
                 return;
             }
             var widthConvert = int.TryParse(this.widthInput.Text, out int widthResult);
-            if (!widthConvert)
+            if (!widthConvert && !string.IsNullOrEmpty(this.widthInput.Text))
             {
                 MessageBox.Show("图片宽度必须为数字整数");
                 this.widthInput.ForeColor = System.Drawing.SystemColors.Desktop;
                 return;
             }
             var heightConvert = int.TryParse(this.heightInput.Text, out int heightResult);
-            if (!heightConvert)
+            if (!heightConvert && !string.IsNullOrEmpty(this.heightInput.Text))
             {
                 MessageBox.Show("图片高度必须为数字整数");
                 this.heightInput.ForeColor = System.Drawing.SystemColors.Desktop;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sjiang\\Desktop\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj": {}
+    "C:\\Users\\sjiang\\Desktop\\ImageMagic-girt\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sjiang\\Desktop\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj": {
+    "C:\\Users\\sjiang\\Desktop\\ImageMagic-girt\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sjiang\\Desktop\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj",
+        "projectUniqueName": "C:\\Users\\sjiang\\Desktop\\ImageMagic-girt\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj",
         "projectName": "ImageMagic",
-        "projectPath": "C:\\Users\\sjiang\\Desktop\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj",
+        "projectPath": "C:\\Users\\sjiang\\Desktop\\ImageMagic-girt\\ImageMagic\\ImageMagic\\ImageMagic\\ImageMagic.csproj",
         "packagesPath": "C:\\Users\\sjiang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sjiang\\Desktop\\ImageMagic\\ImageMagic\\ImageMagic\\obj\\",
+        "outputPath": "C:\\Users\\sjiang\\Desktop\\ImageMagic-girt\\ImageMagic\\ImageMagic\\ImageMagic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sjiang\\AppData\\Roaming\\NuGet\\NuGet.Config",

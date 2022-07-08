@@ -10,8 +10,6 @@ namespace ImageMagic.Utils
 {
     public class ImageTools
     {
-        private static int ImageCount { get; set; }
-
         public static void ImageMagic(string inputPath, string outputPath, int width, int height, string fileType)
         {
             DirectoryInfo directory = new DirectoryInfo(inputPath);
@@ -34,46 +32,51 @@ namespace ImageMagic.Utils
         }
         private static void ConvertImage(FileInfo file, DirectoryInfo directory, string outputPath, int width, int height, string fileType)
         {
-            var fileSize = file.Length / 1024;
-            if (fileSize > 500)
-            {
-                var fileName = file.Name.Replace(".png", "");
-                //file.MoveTo($"{directory}\\{file.Name.Replace(".png", "")}-old.png");
-                //打开文件
-                FileStream fileStream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read);
-                //读取文件的byte
-                byte[] bytes = new byte[fileStream.Length];
-                fileStream.Read(bytes, 0, bytes.Length);
-                fileStream.Close();
-                //把byte[]转换成Stream
-                Stream stream = new MemoryStream(bytes);
+            var imageType = Path.GetExtension(file.FullName);
+            var fileName = file.Name.Replace(imageType, "");
+            //file.MoveTo($"{directory}\\{file.Name.Replace(".png", "")}-old.png");
+            //打开文件
+            FileStream fileStream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read);
+            //读取文件的byte
+            byte[] bytes = new byte[fileStream.Length];
+            fileStream.Read(bytes, 0, bytes.Length);
+            fileStream.Close();
+            //把byte[]转换成Stream
+            Stream stream = new MemoryStream(bytes);
 
-                MagickImage image = new MagickImage(stream);
-                width = width == 0 ? image.Width : width;
-                height = height == 0 ? image.Height : height;
-                image.Resize(new MagickGeometry(width, height));
-                switch (fileType)
-                {
-                    case "JPG":
-                        image.Format = MagickFormat.Jpg;
-                        image.Write($"{outputPath}\\{fileName}.jpg");
-                        break;
-                    case "PNG":
-                        image.Format = MagickFormat.Png;
-                        image.Write($"{outputPath}\\{fileName}.png");
-                        break;
-                    case "SVG":
-                        image.Format = MagickFormat.Svg;
-                        image.Write($"{outputPath}\\{fileName}.svg");
-                        break;
-                    case "GIF":
-                        image.Format = MagickFormat.Gif;
-                        image.Write($"{outputPath}\\{fileName}.gif");
-                        break;
-                    default:
-                        break;
-                }
-                ImageCount++;
+            MagickImage image = new MagickImage(stream);
+            width = width == 0 ? image.Width : width;
+            height = height == 0 ? image.Height : height;
+            image.Resize(new MagickGeometry(width, height));
+            switch (fileType)
+            {
+                case "jpg":
+                    image.Format = MagickFormat.Jpg;
+                    break;
+                case "png":
+                    image.Format = MagickFormat.Png;
+                    break;
+                case "svg":
+                    image.Format = MagickFormat.Svg;
+                    break;
+                case "gif":
+                    image.Format = MagickFormat.Gif;
+                    break;
+                case "ico":
+                    image.Format = MagickFormat.Ico;
+                    break;
+                default:
+                    break;
+            }
+            var filePath = $"{outputPath}\\{fileName}.{fileType}";
+            CheckFileExsit(filePath);
+            image.Write(filePath);
+        }
+        private static void CheckFileExsit(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
             }
         }
     }
