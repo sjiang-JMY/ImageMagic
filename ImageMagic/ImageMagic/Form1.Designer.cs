@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.inputBtn = new System.Windows.Forms.Button();
             this.fromInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
@@ -225,6 +226,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.fromInput);
             this.Controls.Add(this.inputBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "ImageMagic";
             this.ResumeLayout(false);

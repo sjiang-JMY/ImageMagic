@@ -1,0 +1,21 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.svn/
+**/Properties/launchSettings.json
+**/*.csproj.user
+**/.vscode/
+**/.idea/
+**/__pycache__
+**/*.log
+**/*.log.*
+**/node_modules
+**/.DS_Store
+**/Properties/PublishProfiles
+**/.config
+**/tempkey.rsa
+**/node_modules.zip
+code/frontend/package-lock.json
+/code/backend/Phosphorus/Phosphorus.WebApi/temp
+/doc/subject-logics/固定资产-房产/~$【启明星】房地产类底稿 -20220217.xlsx
+
