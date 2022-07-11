@@ -144,7 +144,7 @@
             this.heightLable.Name = "heightLable";
             this.heightLable.Size = new System.Drawing.Size(57, 20);
             this.heightLable.TabIndex = 10;
-            this.heightLable.Text = "长度：";
+            this.heightLable.Text = "高度：";
             // 
             // heightUnit
             // 
