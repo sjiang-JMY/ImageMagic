@@ -1,2 +1,0 @@
-C:\Users\sjiang\Desktop\ImageMagic\ImageMagic\ImageMagic\bin\Release\netcoreapp3.1\publish\win-x64\ImageMagic.pdb
-C:\Users\sjiang\Desktop\ImageMagic\ImageMagic\ImageMagic\bin\Release\netcoreapp3.1\publish\win-x64\ImageMagic.exe
